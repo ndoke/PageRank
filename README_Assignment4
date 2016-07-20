@@ -1,0 +1,22 @@
+Nachiket Doke
+800878686
+
+In this assignment we calculated the pagerank of the wikipedia pages, with the help of hadoop MapReduce basics. This was done using 3 MapReduce phases out of which the second MapReduce was run 10 times using a for-loop.
+
+Commands used to run
+
+$ javac -cp /usr/lib/hadoop/*:/usr/lib/hadoop-mapreduce/* PageRank.java -d build -Xlint
+$ jar -cvf pagerank.jar -C build/ .
+$ hadoop fs -rm -r output*
+$ hadoop jar pagerank.jar org.myorg.PageRank input output1 output2 output3 output4 output5 output6 output7 output8 output9 output10 output11 output12
+
+The separators used in each of these were as follows
+<title.*?>(.*?)</title>
+To separate the contents from the title tags.
+
+<text.*?>(.*?)</text>
+To separate the contents from the text tags.
+
+\\[\\[(.*?)\\]\\]
+To separate the contents from the [[]].
+
